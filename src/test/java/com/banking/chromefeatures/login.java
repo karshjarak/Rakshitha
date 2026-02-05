@@ -23,13 +23,19 @@ public class login {
 	// getPageSource()
 	//new test
 	
+	@BeforeMethod
+	public void sampleMethodOne() {
+		
+		driver = new ChromeDriver();
+	}
+	
 	
 	
 
 	@Test
 	public void sampleMethod() throws InterruptedException {
 
-		driver = new ChromeDriver();
+		
 		driver.get("https://www.facebook.com/");
 		driver.manage().window().maximize();
 		String title = driver.getTitle();
