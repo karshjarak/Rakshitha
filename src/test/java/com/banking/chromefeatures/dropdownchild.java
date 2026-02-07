@@ -39,6 +39,8 @@ public class dropdownchild extends parentd {
 
 		select.selectByVisibleText("Ruby");
 		Thread.sleep(7000);
+		
+		
 
 	}
 

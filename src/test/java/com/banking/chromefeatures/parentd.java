@@ -20,7 +20,7 @@ public class parentd {
 		wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
 
 		driver.manage().timeouts().pageLoadTimeout(java.time.Duration.ofSeconds(20));
-		driver.get("https://demo.automationtesting.in/Register.html");
+		driver.get("https://www.naukri.com/");
 		driver.manage().window().maximize();
 
 		// driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));

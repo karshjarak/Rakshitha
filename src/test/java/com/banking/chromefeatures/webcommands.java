@@ -11,6 +11,12 @@ import org.testng.annotations.Test;
 public class webcommands {
 
 	ChromeDriver driver;
+	
+	//css selector
+	//xpath
+	
+	//tagname[attribute='value']
+	
 
 	// web elements commands
 

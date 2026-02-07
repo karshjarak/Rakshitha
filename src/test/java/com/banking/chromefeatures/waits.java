@@ -21,24 +21,7 @@ public class waits {
 	// WebDriverWait wait;
 	FluentWait<WebDriver> wait;
 
-	@BeforeMethod
-	public void beforeMethod() {
-
-		driver = new ChromeDriver();
-		// driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
-
-		// driver.manage().timeouts().pageLoadTimeout(java.time.Duration.ofSeconds(20));
-
-		// wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
-
-		// fluent wait
-		wait = new FluentWait<WebDriver>(driver).withTimeout(java.time.Duration.ofSeconds(30))
-				.pollingEvery(java.time.Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
-
-		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.manage().window().maximize();
-
-	}
+	
 
 	@Test
 	public void implicitWaitExample() throws InterruptedException {
