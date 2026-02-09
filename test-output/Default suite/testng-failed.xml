@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.banking.chromefeatures.js">
+      <class name="com.banking.chromefeatures.windows">
         <methods>
-          <include name="sample"/>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
+          <include name="sampleMethod"/>
         </methods>
-      </class> <!-- com.banking.chromefeatures.js -->
+      </class> <!-- com.banking.chromefeatures.windows -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

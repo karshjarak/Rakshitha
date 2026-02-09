@@ -20,7 +20,7 @@ public class parentd {
 		wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
 
 		driver.manage().timeouts().pageLoadTimeout(java.time.Duration.ofSeconds(20));
-		driver.get("https://www.naukri.com/");
+		driver.get("https://demo.automationtesting.in/Frames.html");
 		driver.manage().window().maximize();
 
 		// driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(10));
@@ -51,6 +51,22 @@ public class parentd {
 	public WebDriverWait getWait() {
 		return wait;
 	}
+	
+	
+	public void switchToWindow(String windowTitle) {
+	    
+	    for (String window : getDriver().getWindowHandles()) {
+	        getDriver().switchTo().window(window);
+	        if (getDriver().getTitle().equals(windowTitle)) {
+	            return;
+	        }
+	    }
+	   
+	}
+	
+	
+	
+	
 
 	@AfterMethod
 	public void afterMethod() {

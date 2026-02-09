@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-07T15:37:51 IST" name="Default suite" finished-at="2026-02-07T15:38:24 IST" duration-ms="32430">
+  <suite started-at="2026-02-09T13:57:08 IST" name="Default suite" finished-at="2026-02-09T13:57:20 IST" duration-ms="11436">
     <groups>
     </groups>
-    <test started-at="2026-02-07T15:37:51 IST" name="Default test" finished-at="2026-02-07T15:38:24 IST" duration-ms="32430">
-      <class name="com.banking.chromefeatures.js">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.banking.chromefeatures.js@4802796d]" started-at="2026-02-07T15:37:51 IST" name="beforeMethod" finished-at="2026-02-07T15:37:54 IST" duration-ms="3048" status="PASS">
+    <test started-at="2026-02-09T13:57:08 IST" name="Default test" finished-at="2026-02-09T13:57:20 IST" duration-ms="11436">
+      <class name="com.banking.chromefeatures.windows">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.banking.chromefeatures.windows@34123d65]" started-at="2026-02-09T13:57:08 IST" name="beforeMethod" finished-at="2026-02-09T13:57:11 IST" duration-ms="2715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="sample()[pri:0, instance:com.banking.chromefeatures.js@4802796d]" started-at="2026-02-07T15:37:54 IST" name="sample" finished-at="2026-02-07T15:38:23 IST" duration-ms="28979" status="PASS">
+        <test-method signature="sampleMethod()[pri:0, instance:com.banking.chromefeatures.windows@34123d65]" started-at="2026-02-09T13:57:11 IST" name="sampleMethod" finished-at="2026-02-09T13:57:19 IST" duration-ms="8459" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sample -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.banking.chromefeatures.js@4802796d]" started-at="2026-02-07T15:38:23 IST" name="afterMethod" finished-at="2026-02-07T15:38:24 IST" duration-ms="353" status="PASS">
+        </test-method> <!-- sampleMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.banking.chromefeatures.windows@34123d65]" started-at="2026-02-09T13:57:19 IST" name="afterMethod" finished-at="2026-02-09T13:57:20 IST" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.banking.chromefeatures.js -->
+      </class> <!-- com.banking.chromefeatures.windows -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

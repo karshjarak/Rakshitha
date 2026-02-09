@@ -1,7 +1,10 @@
 package com.banking.chromefeatures;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class js extends parentd {
@@ -23,39 +26,116 @@ public class js extends parentd {
 	public void sample() throws InterruptedException {
 
 		JavascriptExecutor js = (JavascriptExecutor) getDriver();
-		
-		js.executeScript("window.location='https://www.naukri.com/'");
-		
+
+		// js.executeScript("window.location='https://www.naukri.com/'");
+
 		Thread.sleep(5000);
-		
-		//scroll down
-		//js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		//js.executeScript("window.scrollBy(0,0)");
-		
-		
+
+		// scroll down
+		// js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+
+		// Thread.sleep(5000);
+
+		// scroll up
+		// js.executeScript("window.scrollBy(0,-document.body.scrollHeight)");
 
 //		js.executeScript("window.scrollBy(0, document.body.scrollHeight)");
 //
 //		Thread.sleep(5000);
 //		js.executeScript("window.scrollBy(0, 0)");
-		
-		Thread.sleep(5000);
-		
-		
-		js.executeScript("arguments[0].scrollIntoView();", getDriver().findElement(By.xpath("(//a[@class='view-all-comp'])[1]")));
-		
-	//	By element = By.id("submit");
-		
-		//getWait().until(ExpectedConditions.visibilityOfElementLocated(element));
-		
-		//getDriver().findElement((By) getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Elements']")))).click();
-		
-	//	js.executeScript("arguments[0].click();", getDriver().findElement(By.cssSelector("#login_Layer")));
-		
-	//	js.executeScript("arguments[0].style.border='3px solid red'", getDriver().findElement(By.xpath("//input[contains(@placeholder, 'Enter your active Email ID')]")));
-		
-//		 js.executeScript("arguments[0].value='adarshini'", getDriver().findElement(By.xpath("//input[contains(@placeholder, 'Enter your active Email ID')]")));
 
+		// Thread.sleep(5000);
+		// scroll till element is visible using javascript executor
+
+		int count = 0;
+
+		while (getDriver().findElements(By.xpath("//a[text()='by Naukri Fastforward']//following-sibling::a")).isEmpty()
+				&& count < 5) {
+			js.executeScript("window.scrollBy(0, 500)");
+			Thread.sleep(4000);
+			count++;
+		}
+
+		if (getDriver().findElements(By.xpath("//div[text()='by Naukri Fastforward']//following-sibling::a"))
+				.size() > 0) {
+
+			js.executeScript("arguments[0].scrollIntoView({block:'center'});",
+					getDriver().findElement(By.xpath("//div[text()='by Naukri Fastforward']//following-sibling::a")));
+			Thread.sleep(5000);
+			getDriver().findElement(By.xpath("//div[text()='by Naukri Fastforward']//following-sibling::a")).click();
+		}
+		
+		System.out.println("Element is visible: " + count);
+
+//		int s = 0;
+//		
+//	List<WebElement> el = getDriver().findElements(By.xpath("//a[text()='by Naukri Fastforward']//following-sibling::a"));
+//		
+//		while(el.size() == 0 && s < 5) {
+//			js.executeScript("window.scrollBy(0, 500)");
+//			el = getDriver().findElements(By.xpath("//a[text()='by Naukri Fastforward']//following-sibling::a"));
+//			s++;
+//			Thread.sleep(4000);
+//			
+//		}
+//		List<WebElement> es = getDriver().findElements(By.xpath("//div[text()='by Naukri Fastforward']//following-sibling::a"));
+//		
+//		if(es.size() > 0) {
+//			
+//			js.executeScript("arguments[0].scrollIntoView({block:'center'});", es.get(0));
+//			Thread.sleep(5000);
+//			es.get(0).click();
+//		}
+//		
+//		
+//		System.out.println("Element is visible: "+ s);
+//
+//		
+
+//
+//		boolean flag = false;
+//		int count = 0;
+//
+//		while (!flag && count < 5) {
+//			try {
+//				By element = By.xpath("//div[text()='by Naukri Fastforward']//following-sibling::a");
+//				flag = getDriver().findElement(element).isDisplayed();
+//				js.executeScript("arguments[0].scrollIntoView({block:'center'});", getDriver().findElement(element));
+//				Thread.sleep(5000);
+//				getDriver().findElement(element).click();
+//
+//			} catch (Exception e) {
+//				js.executeScript("window.scrollBy(0, 500)");
+//				// js.executeScript("arguments[0].click();", el);
+//				count++;
+//				
+//
+//			}
+//
+//		}
+//		
+
+		// js.executeScript("arguments[0].scrollIntoView();",
+		// getDriver().findElement(By.xpath("//h2[text()='Featured companies actively
+		// hiring']")));
+
+		Thread.sleep(5000);
+
+		// By element = By.id("submit");
+
+		// getWait().until(ExpectedConditions.visibilityOfElementLocated(element));
+
+		// getDriver().findElement((By)
+		// getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Elements']")))).click();
+
+		// js.executeScript("arguments[0].click();",
+		// getDriver().findElement(By.cssSelector("#login_Layer")));
+
+		// js.executeScript("arguments[0].style.border='3px solid red'",
+		// getDriver().findElement(By.xpath("//input[contains(@placeholder, 'Enter your
+		// active Email ID')]")));
+
+//		 js.executeScript("arguments[0].value='adarshini'", getDriver().findElement(By.xpath("//input[contains(@placeholder, 'Enter your active Email ID')]")));
 
 		// Actions actions = new Actions(getDriver());
 
@@ -84,7 +164,7 @@ public class js extends parentd {
 
 		// actions.keyDown(Keys.CONTROL).sendKeys("v").keyUp(Keys.CONTROL).perform();
 
-		Thread.sleep(9000);
+		// Thread.sleep(9000);
 
 //		actions.moveToElement(getDriver().findElement(By.xpath("//span[text()='Companies']"))).perform();
 //
@@ -92,8 +172,8 @@ public class js extends parentd {
 
 		// getWait().until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Fintech
 		// companies']"))).click();
-
-		Thread.sleep(9000);
+//
+		// Thread.sleep(9000);
 
 		// getDriver().get("https://demoqa.com/select-menu");
 
